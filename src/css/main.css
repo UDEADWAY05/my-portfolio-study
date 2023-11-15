@@ -143,6 +143,8 @@ body {
 	opacity: 0.8;
 }
 
+.nav-list__link
+
 .nav-list__link--active {
 	position: relative;
 }
@@ -199,6 +201,7 @@ body {
 }
 
 .dark-mode-btn__icon {
+    color: aliceblue;
 	position: relative;
 	z-index: 9;
 }

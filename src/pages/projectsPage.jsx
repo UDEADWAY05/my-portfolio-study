@@ -13,6 +13,7 @@ const ProjectsPage = () => {
                         return (
                             <Project
                                 key={index}
+                                index={index}
                                 title={project.title}
                                 img={project.img}
                             />
