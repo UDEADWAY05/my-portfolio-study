@@ -1,14 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom/cjs/react-router-dom";
 
-const Project = ({ title, img }) => {
+const Project = ({ title, img, index }) => {
     return (
         <li className="project" >
-            <a href="./project-page.html">
+            <Link to={"./projects/" + (index + 1) }>
                 <img src={ img } alt="Project img" className="project__img"/>
                 <h3 className="project__title">{ title }</h3>
-            </a>
+            </Link>
         </li>
     );
 }
- 
+
 export default Project;

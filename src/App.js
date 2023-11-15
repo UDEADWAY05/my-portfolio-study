@@ -1,17 +1,27 @@
 import Footer from './components/footer';
-import NavBar from './components/navBar';
+import React from 'react';
 import './css/main.css'
+import { Route, Switch, Redirect,  } from 'react-router-dom';
+import NavBar from './components/navBar';
+
 import HomePage from './pages/home';
-import ProjectPage from './pages/projectPage';
-import ProjectsPage from './pages/projectsPage';
 import ContactsPage from './pages/contactsPage';
+import Projects from './pages/projects';
+import ScrollToTop from './utils/scrolToTop';
 
 function App() {
     return (
-        <div className='App'>
-            <NavBar />
-            <ProjectPage />
-            <Footer />
+        <div className='body'>
+            <ScrollToTop />
+            <NavBar></NavBar>
+            <Switch>
+                <Route path="/home" component={HomePage} />
+                <Route path="/projects/:id?" component={Projects} />
+                <Route path="/contact" component={ContactsPage} />
+                
+                <Redirect exact from="/" to="/home" />
+            </Switch>
+            <Footer></Footer>
         </div>
   );
 }

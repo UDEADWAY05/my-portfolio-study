@@ -1,24 +1,23 @@
 import React from "react";
 
-import Picture from "../img/projects/02-big.jpg"
 import ButtonGit from "../components/butGit";
 
 
-const ProjectPage = ({ picture, gitHub, src }) => {
+const ProjectPage = ({ picture, gitHub, title, skills }) => {
     return ( 
         <main className="section">
             <div className="container">
                 <div className="project-details">
 
-                    <h1 className="title-1">Video service</h1>
+                    <h1 className="title-1">{ title }</h1>
 
-                    <img src={Picture} alt="" className="project-details__cover" />
+                    <img src={picture} alt="" className="project-details__cover" />
 
                     <div className="project-details__desc">
-                        <p>Skills: React, Node.js, MongoDB</p>
+                        <p>{ skills }</p>
                     </div>
 
-                    <ButtonGit src="https://github.com"/>    
+                    <ButtonGit src={ gitHub } />    
 
                 </div>
             </div>
