@@ -6,8 +6,6 @@ const BtnDarkMode = () => {
     const [theme, setTheme] = useState("light")
     const btnRef = useRef(null)
     useEffect(() => {
-        console.log(theme)
-
         if (theme === "dark") {
             document.body.classList.add("dark")
             btnRef.current.classList.add("dark-mode-btn--active")
